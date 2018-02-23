@@ -10,20 +10,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane prefHeight="412.0" prefWidth="682.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gpg.gcode.application.view.gcodecanvas.GCodeCanvasPresenter">
-  <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gpg.gcode.application.view.gcodecanvas.GCodeCanvasPresenter">
+  <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
     <center>
-      <TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <BorderPane.margin>
-          <Insets top="10.0" />
-        </BorderPane.margin>
-      </TextArea>
     </center>
-    <right>
-      <ListView fx:id="empList" prefHeight="200.0" prefWidth="200.0" />
-    </right>
     <top>
-      <Button fx:id="clickMeButton" alignment="CENTER" onAction="#gotoSettings" text="%GCodeCanvasPresenter.gotoSettings" BorderPane.alignment="CENTER_LEFT" />
+      <Button fx:id="gotoSettingButton" alignment="CENTER" onAction="#gotoSettings" text="%GCodeCanvasPresenter.gotoSettings" BorderPane.alignment="CENTER_LEFT" />
     </top>
   </BorderPane>
   <padding>

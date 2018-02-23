@@ -16,7 +16,7 @@
      <ListView fx:id="settingList" prefHeight="200.0" prefWidth="200.0" />
     </center>
     <top>
-      <Button fx:id="clickMeButton" alignment="CENTER" onAction="#gotoCanvas" text="%GCodeSettingsPresenter.gotoCanvas" BorderPane.alignment="CENTER_LEFT" />
+      <Button fx:id="gotoCanvas" alignment="CENTER" onAction="#gotoCanvas" text="%GCodeSettingsPresenter.gotoCanvas" BorderPane.alignment="CENTER_LEFT" />
     </top>
   </BorderPane>
   <padding>

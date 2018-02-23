@@ -12,6 +12,8 @@ import gpg.gcode.application.language.Messages;
 import gpg.gcode.application.view.gcodecanvas.GCodeCanvasPresenter;
 import gpg.gcode.application.view.gcodecanvas.GCodeCanvasView;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -48,9 +50,10 @@ public class GCodeFX extends Application {
 		Injector.setConfigurationSource(customProperties::get);
 
 		GCodeCanvasView canvasView = new GCodeCanvasView();
+		Scene scene = new Scene(canvasView.getView());
+		stage.setScene(scene);
 		((GCodeCanvasPresenter)canvasView.getPresenter() ).setStage(stage);
 
-		Scene scene = new Scene(canvasView.getView());
 		scene.getStylesheets().add(CSS_RESOURCE_NAME);
 
 		stage.setTitle(Messages.GetBundle().getString("GCodeFX.title"));
@@ -61,7 +64,9 @@ public class GCodeFX extends Application {
 
 	//	final String uri = getClass().getResource("app.css").toExternalForm();
 //		scene.getStylesheets().add(uri);
-		stage.setScene(scene);
+
+
+
 		stage.show();
 
 		// FXMLLoader loader = new FXMLLoader();

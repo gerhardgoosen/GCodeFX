@@ -38,7 +38,7 @@ public class GCodeSettingsPresenter implements Initializable {
 	private JPAService jpaService;
 
 	@FXML
-	public Button clickMeButton;
+	public Button gotoSettingCanvas;
 
 
 	@FXML
@@ -51,7 +51,7 @@ public class GCodeSettingsPresenter implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		print(Messages.GetBundle().getString("helloText"));
-		//settingList.setItems(fetchStudents());
+		 settingList.setItems(fetchStudents());
 	}
 
 
@@ -70,7 +70,7 @@ public class GCodeSettingsPresenter implements Initializable {
 		this.stage=stage;
 		// Hot key Ctrl + H for clickMe button
 		stage.addEventFilter(KeyEvent.KEY_PRESSED, (event -> {
-			if (new KeyCodeCombination(KeyCode.H, KeyCombination.CONTROL_DOWN).match(event)) {
+			if (new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN).match(event)) {
 				gotoCanvas();
 				event.consume();
 			}
@@ -94,11 +94,11 @@ public class GCodeSettingsPresenter implements Initializable {
 	public void gotoCanvas() {
 
 	    GCodeCanvasView canvasView = new GCodeCanvasView();
-			((GCodeCanvasPresenter)canvasView.getPresenter() ).setStage(stage);
 
 			Scene scene = new Scene(canvasView.getView());
 
 			this.stage.setScene(scene);
+			((GCodeCanvasPresenter)canvasView.getPresenter() ).setStage(this.stage);
 			this.stage.show();
 
 
