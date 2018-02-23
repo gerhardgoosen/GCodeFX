@@ -28,7 +28,7 @@ public class GCodeFX extends Application {
 		// Forced to set the language
 		// Locale.setDefault(new Locale("en", "EN"));
 		// Locale.setDefault(new Locale("be", "BY"));
-		// Locale.setDefault(new Locale("ru", "RU"));
+		 //Locale.setDefault(new Locale("ru", "RU"));
 
 		launch(args);
 

@@ -51,6 +51,7 @@ public class GCodeSettingsPresenter implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		print(Messages.GetBundle().getString("helloText"));
+		//settingList.setItems(fetchStudents());
 	}
 
 
@@ -109,7 +110,7 @@ public class GCodeSettingsPresenter implements Initializable {
 
 	}
 
-	private ObservableList<String> fetchStudents() throws SQLException {
+	private ObservableList<String> fetchStudents()   {
 		logger.info("Fetching Students from database");
 		ObservableList<String> students = FXCollections.observableArrayList();
 
