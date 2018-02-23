@@ -1,4 +1,4 @@
-package gpg.gcode.application;
+package gpg.gcode.application.afterburner;
 
 /*
  * #%L
