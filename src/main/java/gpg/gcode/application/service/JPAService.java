@@ -12,8 +12,11 @@ public class JPAService {
 	private EntityManager entityManager;
 
 	public EntityManager initilizeEntityManager() {
-		emFactory = Persistence.createEntityManagerFactory("GCodeFX_DB");
-		setEntityManager(emFactory.createEntityManager());
+
+		if(emFactory==null || entityManager==null){
+			emFactory = Persistence.createEntityManagerFactory("GCodeFX_DB");
+			setEntityManager(emFactory.createEntityManager());
+		}
 
 		return getEntityManager();
 	}
